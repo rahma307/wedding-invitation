@@ -451,35 +451,35 @@ function BigDay() {
   );
 }
 
-function Confirmation({ guestId }: { guestId: string }) {
-  return (
-    <motion.section
-      className="confirmation"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.15 }}
-      variants={fadeUp}
-      transition={{ duration: 0.7, ease: 'easeOut' }}
-    >
-      <div className="display section-title">Confirmation</div>
-      <div className="confirmation-copy">
-        We'd be so grateful if you could confirm your attendance with us directly — message us anytime, we read everything!
-      </div>
-      <a
-        className="rsvp-link"
-        href="https://wa.me/201283374287"
-        target="_blank"
-        rel="noreferrer"
-        aria-label={`Confirm attendance on WhatsApp${guestId ? ` for invitation ${guestId}` : ''}`}
-        data-testid="link-confirm-whatsapp"
-      >
-        <MessageCircle size={18} strokeWidth={1.8} aria-hidden="true" />
-        <span>Confirm on WhatsApp</span>
-      </a>
-      <div className="display closing">With love, Abd elrahman &amp; Donia</div>
-    </motion.section>
-  );
-}
+// function Confirmation({ guestId }: { guestId: string }) {
+//   return (
+//     <motion.section
+//       className="confirmation"
+//       initial="hidden"
+//       whileInView="visible"
+//       viewport={{ once: true, amount: 0.15 }}
+//       variants={fadeUp}
+//       transition={{ duration: 0.7, ease: 'easeOut' }}
+//     >
+//       <div className="display section-title">Confirmation</div>
+//       <div className="confirmation-copy">
+//         We'd be so grateful if you could confirm your attendance with us directly — message us anytime, we read everything!
+//       </div>
+//       <a
+//         className="rsvp-link"
+//         href="https://wa.me/201283374287"
+//         target="_blank"
+//         rel="noreferrer"
+//         aria-label={`Confirm attendance on WhatsApp${guestId ? ` for invitation ${guestId}` : ''}`}
+//         data-testid="link-confirm-whatsapp"
+//       >
+//         <MessageCircle size={18} strokeWidth={1.8} aria-hidden="true" />
+//         <span>Confirm on WhatsApp</span>
+//       </a>
+//       <div className="display closing">With love, Abd elrahman &amp; Donia</div>
+//     </motion.section>
+//   );
+// }
 
 function App() {
   const guestId = new URLSearchParams(window.location.search).get('i') ?? '';
@@ -492,7 +492,7 @@ function App() {
         <Announcement />
         <OurStory />
         <BigDay />
-        <Confirmation guestId={guestId} />
+        {/* <Confirmation guestId={guestId} /> */}
       </div>
     </main>
   );
