@@ -12,7 +12,7 @@ import './index.css';
 
 const asset = (file: string) => `${import.meta.env.BASE_URL}assets/${file}`;
 const musicPhoto = asset('5fdffe22-87c8-43b2-a330-defe98046360.jpg');
-const couplePhoto = asset('a88c4529-c83a-42ae-8440-31c2489e2f7e.jpg');
+const couplePhoto = asset('WhatsApp Image 2026-09-02 at 1.02.58 PM.jpeg');
 const storyPhotoOne = asset('a88c4529-c83a-42ae-8440-31c2489e2f7e.jpg');
 const storyPhotoTwo = asset('05132ad6-a363-4f9e-b8bb-423167adbd02.jpg');
 const storyPhotoThree = asset('92cd7c96-4d97-4d12-9e94-cb8be07f5658.jpg');
