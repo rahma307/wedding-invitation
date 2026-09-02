@@ -11,12 +11,12 @@ import {
 import './index.css';
 
 const asset = (file: string) => `${import.meta.env.BASE_URL}assets/${file}`;
-const musicPhoto = asset('79a3168cf52edca304ff32db46e0f888.jpg');
-const couplePhoto = asset('WhatsApp Image 2026-09-01 at 7.00.13 PM.jpeg');
-const storyPhotoOne = asset('f4408ae59bc76f809d049fcc92cbea80.jpg');
-const storyPhotoTwo = asset('9dd45271b020a094a12bfeee12b39f65.jpg');
-const storyPhotoThree = asset('40a42f4b27a14089b82a916aaff0b298.jpg');
-const audioSource = asset('WhatsApp Audio 2026-09-02 at 9.31.00 AM.mp4');
+const musicPhoto = asset('5fdffe22-87c8-43b2-a330-defe98046360.jpg');
+const couplePhoto = asset('a88c4529-c83a-42ae-8440-31c2489e2f7e.jpg');
+const storyPhotoOne = asset('a88c4529-c83a-42ae-8440-31c2489e2f7e.jpg');
+const storyPhotoTwo = asset('05132ad6-a363-4f9e-b8bb-423167adbd02.jpg');
+const storyPhotoThree = asset('92cd7c96-4d97-4d12-9e94-cb8be07f5658.jpg');
+const audioSource = asset('WhatsApp Audio 2026-09-02 at 12.26.25 PM.mp4');
 
 const fadeUp = {
   hidden: { opacity: 0, y: 16 },
@@ -44,7 +44,7 @@ function EnvelopeHero() {
   return (
     <section className="hero" aria-label="Wedding invitation">
       <div className="hero-flap" />
-      <div className="seal" aria-label="Youssef and Safa monogram">Y&amp;S</div>
+      <div className="seal" aria-label="Abd elrahman and Donia monogram">A&amp;D</div>
       <div className="hero-copy">
         <motion.div
           className="display hero-title"
@@ -53,11 +53,11 @@ function EnvelopeHero() {
           variants={fadeUp}
           transition={{ duration: 1, ease: 'easeOut', delay: 0.2 }}
         >
-          Youssef
+           Abd elrahman
           <br />
           &amp;
           <br />
-          Safa
+          Donia 
         </motion.div>
         <motion.div
           className="hero-rule"
@@ -73,7 +73,7 @@ function EnvelopeHero() {
           variants={fadeUp}
           transition={{ duration: 1, ease: 'easeOut', delay: 0.8 }}
         >
-          15 . 08 . 2026
+          8 . 10 . 2026
         </motion.div>
       </div>
     </section>
@@ -127,12 +127,12 @@ function MusicPlayer() {
     <section className="music" aria-label="Music player">
       <DecorativeLineArt side="left" />
       <DecorativeLineArt side="right" />
-      <div className="display monogram">Y &amp; S</div>
-      <div className="music-subtitle">Youssef &amp; Safa</div>
+      <div className="display monogram">A &amp; D</div>
+      <div className="music-subtitle">Abd elrahman &amp; Donia</div>
       <div className="music-photo">
-        <img src={musicPhoto} alt="Youssef and Safa" />
+        <img src={musicPhoto} alt="Abd elrahman and Donia" />
       </div>
-      <div className="music-track">Youssef &amp; Safa | 15.08.26</div>
+      <div className="music-track">Abd elrahman &amp; Donia | 8.10.26</div>
       <div className="seek-wrap">
         <label htmlFor="wedding-song-seek" className="sr-only">Seek through the wedding song</label>
         <input
@@ -199,7 +199,7 @@ function MusicPlayer() {
 }
 
 function getCountdown() {
-  const wedding = new Date('2026-08-15T20:00:00');
+ const wedding = new Date('2026-10-08T19:00:00');
   const difference = Math.max(0, wedding.getTime() - Date.now());
   return [
     { value: String(Math.floor(difference / 86400000)).padStart(2, '0'), label: 'Days' },
@@ -230,9 +230,9 @@ function Announcement() {
       <div className="note">
         After years of laughter, patience, and falling more in love with every ordinary day — we're making it official — we're engaged. We can't imagine that day without the people who mean the most to us. That's you.
       </div>
-      <div className="signature display">Y | S</div>
+      <div className="signature display">A | D</div>
       <div className="couple-photo">
-        <img src={couplePhoto} alt="Youssef and Safa" />
+        <img src={couplePhoto} alt="Abd elrahman and Donia" />
       </div>
       <div className="quote display">"Every love story is beautiful, but ours is our favorite."</div>
       <div className="countdown" aria-label="Countdown to the wedding">
@@ -306,41 +306,109 @@ function OurStory() {
   );
 }
 
-function AugustCalendar() {
+// function AugustCalendar() {
+//   const weekdays = ['MO', 'TU', 'WE', 'TH', 'FR', 'SA', 'SU'];
+//   const days = useMemo(() => {
+//     const firstDay = new Date(2026, 7, 1);
+//     // const offset = (firstDay.getDay() + 6) % 7;
+//     const offset = 1; // 1 October starts on Tuesday
+//     const cells: Array<{ label: string; target: boolean }> = [];
+//     for (let index = 0; index < offset; index += 1) cells.push({ label: '', target: false });
+//     for (let date = 1; date <= 31; date += 1) cells.push({ label: String(date), target: date === 15 });
+//     while (cells.length % 7 !== 0) cells.push({ label: '', target: false });
+//     return cells;
+//   }, []);
+
+//   return (
+//     <div aria-label="August 2026 calendar">
+//       <div className="weekdays">
+//         {weekdays.map((weekday) => <div key={weekday}>{weekday}</div>)}
+//       </div>
+//       <div className="calendar">
+//         {days.map((day, index) => (
+//           day.target ? (
+//             <div className="target-wrap" key={`target-${index}`} aria-label="August 15, 2026">
+//               <div className="petal one" />
+//               <div className="petal two" />
+//               <div className="petal three" />
+//               <div className="target-label">{day.label}</div>
+//             </div>
+//           ) : (
+//             <div className={`day${day.label ? '' : ' blank'}`} key={`day-${index}`}>{day.label || '0'}</div>
+//           )
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
+
+function OctoberCalendar() {
   const weekdays = ['MO', 'TU', 'WE', 'TH', 'FR', 'SA', 'SU'];
+
   const days = useMemo(() => {
-    const firstDay = new Date(2026, 7, 1);
-    const offset = (firstDay.getDay() + 6) % 7;
+    // 1 October will appear under Tuesday
+    const offset = 3;
+
     const cells: Array<{ label: string; target: boolean }> = [];
-    for (let index = 0; index < offset; index += 1) cells.push({ label: '', target: false });
-    for (let date = 1; date <= 31; date += 1) cells.push({ label: String(date), target: date === 15 });
-    while (cells.length % 7 !== 0) cells.push({ label: '', target: false });
+
+    for (let index = 0; index < offset; index += 1) {
+      cells.push({
+        label: '',
+        target: false,
+      });
+    }
+
+    for (let date = 1; date <= 31; date += 1) {
+      cells.push({
+        label: String(date),
+        target: date === 8,
+      });
+    }
+
+    while (cells.length % 7 !== 0) {
+      cells.push({
+        label: '',
+        target: false,
+      });
+    }
+
     return cells;
   }, []);
 
   return (
-    <div aria-label="August 2026 calendar">
+    <div aria-label="October 2026 calendar">
       <div className="weekdays">
-        {weekdays.map((weekday) => <div key={weekday}>{weekday}</div>)}
+        {weekdays.map((weekday) => (
+          <div key={weekday}>{weekday}</div>
+        ))}
       </div>
+
       <div className="calendar">
-        {days.map((day, index) => (
+        {days.map((day, index) =>
           day.target ? (
-            <div className="target-wrap" key={`target-${index}`} aria-label="August 15, 2026">
+            <div
+              className="target-wrap"
+              key={`target-${index}`}
+              aria-label="October 8, 2026"
+            >
               <div className="petal one" />
               <div className="petal two" />
               <div className="petal three" />
               <div className="target-label">{day.label}</div>
             </div>
           ) : (
-            <div className={`day${day.label ? '' : ' blank'}`} key={`day-${index}`}>{day.label || '0'}</div>
+            <div
+              className={`day${day.label ? '' : ' blank'}`}
+              key={`day-${index}`}
+            >
+              {day.label || '0'}
+            </div>
           )
-        ))}
+        )}
       </div>
     </div>
   );
 }
-
 function BigDay() {
   return (
     <motion.section
@@ -352,14 +420,14 @@ function BigDay() {
       transition={{ duration: 0.7, ease: 'easeOut' }}
     >
       <div className="display section-title">The Big Day</div>
-      <div className="month">August 2026</div>
-      <AugustCalendar />
+      <div className="month">October 2026</div>
+      <OctoberCalendar />
       <div className="venue">
         <div className="display section-title">Venue</div>
         <div className="venue-rule" />
-        <div className="display venue-name">Louvre Heights</div>
-        <div className="doors">Doors open 8:00 PM</div>
-        <div className="address">3 Al Nadi, New Cairo 1<br />Cairo Governorate 4727401</div>
+        <div className="display venue-name">Diamond </div>
+        <div className="doors">Doors open 7:00 PM</div>
+        <div className="address">Al Estad, Qesm Than Madinet Nasr,<br />Cairo Governorate 4436011</div>
         <a
           className="location-link"
           href="https://www.google.com/maps/search/?api=1&query=3+Al+Nadi,+New+Cairo+1,+Cairo+Governorate+4727401"
@@ -399,7 +467,7 @@ function Confirmation({ guestId }: { guestId: string }) {
       </div>
       <a
         className="rsvp-link"
-        href="https://wa.me/201033370771"
+        href="https://wa.me/201283374287"
         target="_blank"
         rel="noreferrer"
         aria-label={`Confirm attendance on WhatsApp${guestId ? ` for invitation ${guestId}` : ''}`}
@@ -408,7 +476,7 @@ function Confirmation({ guestId }: { guestId: string }) {
         <MessageCircle size={18} strokeWidth={1.8} aria-hidden="true" />
         <span>Confirm on WhatsApp</span>
       </a>
-      <div className="display closing">With love, Youssef &amp; Safa</div>
+      <div className="display closing">With love, Abd elrahman &amp; Donia</div>
     </motion.section>
   );
 }
