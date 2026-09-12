@@ -14,8 +14,8 @@ const asset = (file: string) => `${import.meta.env.BASE_URL}assets/${file}`;
 const musicPhoto = asset('5fdffe22-87c8-43b2-a330-defe98046360.jpg');
 const couplePhoto = asset('WhatsApp Image 2026-09-02 at 1.02.58 PM.jpeg');
 const storyPhotoOne = asset('a88c4529-c83a-42ae-8440-31c2489e2f7e.jpg');
-const storyPhotoTwo = asset('05132ad6-a363-4f9e-b8bb-423167adbd02.jpg');
-const storyPhotoThree = asset('92cd7c96-4d97-4d12-9e94-cb8be07f5658.jpg');
+const storyPhotoTwo = asset('WhatsApp Image 2026-09-12 at 11.08.03 AM.jpeg');
+const storyPhotoThree = asset('image.png');
 const audioSource = asset('WhatsApp Audio 2026-09-02 at 12.26.25 PM.mp4');
 
 const fadeUp = {
@@ -42,41 +42,49 @@ function DecorativeLineArt({ side }: { side: 'left' | 'right' }) {
 
 function EnvelopeHero() {
   return (
-    <section className="hero" aria-label="Wedding invitation">
-      <div className="hero-flap" />
-      <div className="seal" aria-label="Abd elrahman and Donia monogram">A&amp;D</div>
-      <div className="hero-copy">
-        <motion.div
-          className="display hero-title"
-          initial="hidden"
-          animate="visible"
-          variants={fadeUp}
-          transition={{ duration: 1, ease: 'easeOut', delay: 0.2 }}
-        >
-           Abd elrahman
-          <br />
-          &amp;
-          <br />
-          Donia 
-        </motion.div>
-        <motion.div
-          className="hero-rule"
-          initial="hidden"
-          animate="visible"
-          variants={fadeUp}
-          transition={{ duration: 1, ease: 'easeOut', delay: 0.6 }}
-        />
-        <motion.div
-          className="hero-date"
-          initial="hidden"
-          animate="visible"
-          variants={fadeUp}
-          transition={{ duration: 1, ease: 'easeOut', delay: 0.8 }}
-        >
-          8 . 10 . 2026
-        </motion.div>
-      </div>
-    </section>
+    // <section className="hero" aria-label="Wedding invitation">
+    //   <div className="hero-flap" />
+    //   <div className="seal" aria-label="Abd elrahman and Donia monogram">A&amp;D</div>
+    //   <div className="hero-copy">
+    //     <motion.div
+    //       className="display hero-title"
+    //       initial="hidden"
+    //       animate="visible"
+    //       variants={fadeUp}
+    //       transition={{ duration: 1, ease: 'easeOut', delay: 0.2 }}
+    //     >
+    //        Abd elrahman
+    //       <br />
+    //       &amp;
+    //       <br />
+    //       Donia 
+    //     </motion.div>
+    //     <motion.div
+    //       className="hero-rule"
+    //       initial="hidden"
+    //       animate="visible"
+    //       variants={fadeUp}
+    //       transition={{ duration: 1, ease: 'easeOut', delay: 0.6 }}
+    //     />
+    //     <motion.div
+    //       className="hero-date"
+    //       initial="hidden"
+    //       animate="visible"
+    //       variants={fadeUp}
+    //       transition={{ duration: 1, ease: 'easeOut', delay: 0.8 }}
+    //     >
+    //       8 . 10 . 2026
+    //     </motion.div>
+    //   </div>
+    // </section>
+    <section className="hero" aria-label="Engagement invitation">
+  <img
+    src="public\assets\images\image.png"
+    alt="Abdelrahman and Donia engagement invitation"
+    className="hero-image"
+  />
+</section>
+    
   );
 }
 
@@ -409,47 +417,62 @@ function OctoberCalendar() {
     </div>
   );
 }
+ 
 function BigDay() {
-  return (
-    <motion.section
-      className="big-day"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.15 }}
-      variants={fadeUp}
-      transition={{ duration: 0.7, ease: 'easeOut' }}
+return (
+<motion.section
+className="big-day"
+initial="hidden"
+whileInView="visible"
+viewport={{ once: true, amount: 0.15 }}
+variants={fadeUp}
+transition={{ duration: 0.7, ease: "easeOut" }}
+> <div className="display section-title">The Big Day</div> <div className="month">October 2026</div>
+
+
+  <OctoberCalendar />
+
+  <div className="venue">
+    <div className="display section-title">Venue</div>
+    <div className="venue-rule" />
+
+    <div className="display venue-name">
+      Eloura Hall Panorama October
+    </div>
+
+    <div className="doors">Doors open 7:00 PM</div>
+
+    <div className="address">
+      Eloura Hall Panorama October
+      <br />
+      Cairo, Egypt
+    </div>
+
+    <a
+      className="location-link"
+      href="https://www.google.com/maps/place/Eloura+HallPanorama+October/@30.0737642,31.3055353,17z/data=!3m1!4b1!4m6!3m5!1s0x14583f0075c013bd:0x6266c440450952b0!8m2!3d30.0737642!4d31.3055353!16s%2Fg%2F11nk5l2s4v!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D"
+      target="_blank"
+      rel="noreferrer"
+      data-testid="link-view-location"
     >
-      <div className="display section-title">The Big Day</div>
-      <div className="month">October 2026</div>
-      <OctoberCalendar />
-      <div className="venue">
-        <div className="display section-title">Venue</div>
-        <div className="venue-rule" />
-        <div className="display venue-name">Diamond </div>
-        <div className="doors">Doors open 7:00 PM</div>
-        <div className="address">Al Estad, Qesm Than Madinet Nasr,<br />Cairo Governorate 4436011</div>
-        <a
-          className="location-link"
-          href="https://www.google.com/maps/search/?api=1&query=3+Al+Nadi,+New+Cairo+1,+Cairo+Governorate+4727401"
-          target="_blank"
-          rel="noreferrer"
-          data-testid="link-view-location"
-        >
-          <MapPin size={16} strokeWidth={1.8} aria-hidden="true" />
-          <span>View Location</span>
-        </a>
-      </div>
-      <div className="map-frame">
-        <iframe
-          src="https://www.google.com/maps?q=3+Al+Nadi,+New+Cairo+1,+Cairo+Governorate+4727401&output=embed"
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          title="Venue map"
-        />
-      </div>
-    </motion.section>
-  );
+      <MapPin size={16} strokeWidth={1.8} aria-hidden="true" />
+      <span>View Location</span>
+    </a>
+  </div>
+
+  <div className="map-frame">
+    <iframe
+      src="https://www.google.com/maps?q=30.0737642,31.3055353&output=embed"
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      title="Eloura Hall Panorama October map"
+    />
+  </div>
+</motion.section>
+
+);
 }
+
 
 // function Confirmation({ guestId }: { guestId: string }) {
 //   return (
