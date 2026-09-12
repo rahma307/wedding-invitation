@@ -448,15 +448,15 @@ transition={{ duration: 0.7, ease: "easeOut" }}
     <div className="venue-rule" />
 
     <div className="display venue-name">
-      Diamond Hall Panorama October
+      Diamond Hall  
     </div>
 
     <div className="doors">Doors open 7:00 PM</div>
 
     <div className="address">
-     Club Stadium Corridor St., Salah Salem Rd. 
-      <br />
-      Cairo
+  
+Panorama October Club, Stadium Corridor St.
+Salah Salem Rd., Cairo.
     </div>
 
     <a
