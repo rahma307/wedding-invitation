@@ -79,7 +79,7 @@ function EnvelopeHero() {
     // </section>
     <section className="hero" aria-label="Engagement invitation">
   <img
-    src="public\assets\images\image.png"
+    src="/assets/images/image.png"
     alt="Abdelrahman and Donia engagement invitation"
     className="hero-image"
   />
