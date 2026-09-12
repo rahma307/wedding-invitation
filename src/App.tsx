@@ -135,13 +135,18 @@ function MusicPlayer() {
     <section className="music" aria-label="Music player">
       <DecorativeLineArt side="left" />
       <DecorativeLineArt side="right" />
-      <div className="display monogram">A &amp; D</div>
-      <div className="music-subtitle">Abd elrahman &amp; Donia</div>
-      <div className="music-photo">
+<div className="monogram">
+    <img src="/public/assets/images/monogram-ad.png" alt="A & D" />
+</div>     
+ <div className="music-photo">
         <img src={musicPhoto} alt="Abd elrahman and Donia" />
       </div>
-      <div className="music-track">Abd elrahman &amp; Donia | 8.10.26</div>
-      <div className="seek-wrap">
+<div className="music-track">
+    <img
+        src="/public/assets/images/AbdelRahman_Donia_08.10.2026_transparent_fixed2.png"
+        alt="Abd elrahman & Donia | 8.10.26"
+    />
+</div>      <div className="seek-wrap">
         <label htmlFor="wedding-song-seek" className="sr-only">Seek through the wedding song</label>
         <input
           id="wedding-song-seek"
@@ -238,8 +243,12 @@ function Announcement() {
       <div className="note">
         After years of laughter, patience, and falling more in love with every ordinary day — we're making it official — we're engaged. We can't imagine that day without the people who mean the most to us. That's you.
       </div>
-      <div className="signature display">A | D</div>
-      <div className="couple-photo">
+<div className="signature display">
+    <img
+        src="/public/assets/images/monogram-ad2.png"
+        alt="A | D"
+    />
+</div>      <div className="couple-photo">
         <img src={couplePhoto} alt="Abd elrahman and Donia" />
       </div>
       <div className="quote display">"Every love story is beautiful, but ours is our favorite."</div>
@@ -284,8 +293,10 @@ function OurStory() {
       variants={fadeUp}
       transition={{ duration: 0.7, ease: 'easeOut' }}
     >
-      <div className="display section-title">Our Story</div>
-      <div className="section-rule" />
+<div className="display section-title">
+    <img src="/public/assets/images/our-story.png" alt="Our Story" />
+</div>    
+  <div className="section-rule" />
       <div className="story-list">
         {storyItems.map((item, index) => (
           <div className={`story-item${item.reverse ? ' reverse' : ''}`} key={item.title}>
@@ -437,7 +448,7 @@ transition={{ duration: 0.7, ease: "easeOut" }}
     <div className="venue-rule" />
 
     <div className="display venue-name">
-      Eloura Hall Panorama October
+      Diamond Hall Panorama October
     </div>
 
     <div className="doors">Doors open 7:00 PM</div>
@@ -450,7 +461,7 @@ transition={{ duration: 0.7, ease: "easeOut" }}
 
     <a
       className="location-link"
-      href="https://www.google.com/maps/place/Eloura+HallPanorama+October/@30.0737642,31.3055353,17z/data=!3m1!4b1!4m6!3m5!1s0x14583f0075c013bd:0x6266c440450952b0!8m2!3d30.0737642!4d31.3055353!16s%2Fg%2F11nk5l2s4v!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D"
+      href= "https://maps.app.goo.gl/ZNgMfRauxpsHMver6"
       target="_blank"
       rel="noreferrer"
       data-testid="link-view-location"
@@ -460,14 +471,14 @@ transition={{ duration: 0.7, ease: "easeOut" }}
     </a>
   </div>
 
-  <div className="map-frame">
-    <iframe
-      src="https://www.google.com/maps?q=30.0737642,31.3055353&output=embed"
-      loading="lazy"
-      referrerPolicy="no-referrer-when-downgrade"
-      title="Eloura Hall Panorama October map"
-    />
-  </div>
+<div className="map-frame">
+  <iframe
+    src="https://www.google.com/maps?q=Diamond+Hall,+Cairo,+Egypt&output=embed"
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  />
+</div>
 </motion.section>
 
 );

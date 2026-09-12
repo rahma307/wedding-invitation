@@ -13,7 +13,19 @@
   src: url('/assets/a11a9ab0-3ba9-4052-bfc7-b0a53cca942f.woff2') format('woff2');
 }
 
-/* :root {
+ 
+
+ /* @font-face {
+    font-family: "WeddingFont";
+    src: url("./fonts/wedding-font.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.amsterdam {
+    font-family: "WeddingFont", cursive;
+} */
+ /* :root {
   --paper: #f5efe6;
   --ink: #4a3b26;
   --cocoa: #6e5330;
@@ -39,12 +51,12 @@ body {
  :root {
   --paper: hsl(29, 82%, 94%);
   --ink: hsl(24, 96%, 89%);
-  --cocoa: #6e5330;
-  --ochre: #8c6d3f;
+  --cocoa: #22201f;
+  --ochre: #3b3b3a;
   --sand: #d9b48f;
-  --gold: #9c7a45;
-  --line: #c9a47c;
-  --copy: #7a6a52;
+  --gold: #20201f;
+  --line: #2c2c2b;
+  --copy: #424241;
   --font-body: 'Karla', sans-serif;
   --font-display: 'Marcellus', serif;
 }
@@ -66,6 +78,19 @@ body {
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
 }
+ 
+/* .great-vibes {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.arizonia {
+  font-family: "Arizonia", cursive;
+  font-weight: 600;
+  font-style: normal;
+} */
+ 
 
 button, input { font: inherit; }
 button { border: 0; }
@@ -133,6 +158,18 @@ img { max-width: 100%; }
   background: linear-gradient(135deg, #a9835a, var(--ochre));
   clip-path: polygon(0 0, 100% 0, 50% 100%);
 }
+.signature.display img {
+    width: 180px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.section-title img {
+    width: 180px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
 .seal {
   position: absolute;
   z-index: 2;
@@ -170,8 +207,8 @@ img { max-width: 100%; }
 .botanical.right { right: 8px; transform: scaleX(-1); }
 .monogram { margin-top: 6px; font-size: 30px; letter-spacing: 2px; }
 .music-subtitle { margin-top: 4px; font-size: 11px; letter-spacing: 3px; opacity: 0.85; text-transform: uppercase; }
-.music-photo { margin-top: 24px; overflow: hidden; border-radius: 10px; box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3); }
-.music-photo img { display: block; width: 100%; height: 400px; object-fit: cover; object-position: center 55%; }
+.music-photo { margin-top: 5px; overflow: hidden; border-radius: 10px; box-shadow: 0 14px 28px rgba(0, 0, 0, 0.28); margin-bottom: 0 px; }
+.music-photo img { display: block; width: 100%; height: 500px; object-fit: cover; object-position: center 55%; }
 .music-track { margin-top: 18px; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; }
 .seek-wrap { margin-top: 16px; }
 .seek { display: block; width: 100%; height: 4px; margin: 0; cursor: pointer; accent-color: var(--cocoa); }
@@ -189,12 +226,25 @@ img { max-width: 100%; }
   background: transparent;
   transition: transform 180ms ease, opacity 180ms ease;
 }
+.monogram img {
+    width: 120px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+
+}
+.music-track img {
+    width: 320px;
+    height: auto;
+    display: block;
+    margin: auto ;
+}
 .player-button:hover { opacity: 0.75; transform: translateY(-1px); }
 .player-button:focus-visible, .location-link:focus-visible, .rsvp-link:focus-visible { outline: 2px solid var(--sand); outline-offset: 4px; }
 .player-button.main { width: 52px; height: 52px; border: 1px solid var(--cocoa); border-radius: 50%; background: rgba(245, 239, 230, 0.12); }
 
 .announcement { padding: 56px 32px 40px; text-align: center; }
-.eyebrow { color: #a9865f; font-size: 15px; font-style: italic; letter-spacing: 1px; }
+.eyebrow { color: #3a3837; font-size: 15px; font-style: italic; letter-spacing: 1px; text-transform: uppercase; font-weight: bolder; }
 .note { margin-top: 14px; color: #6b5a3e; font-size: 17px; line-height: 1.75; }
 .signature { margin-top: 26px; color: var(--gold); font-size: 26px; font-style: italic; letter-spacing: 4px; }
 /* .couple-photo { position: relative; margin-top: 32px; overflow: hidden; border-radius: 8px; box-shadow: 0 16px 32px rgba(110, 83, 48, 0.18); }
@@ -242,7 +292,7 @@ img { max-width: 100%; }
 
 .story { padding: 60px 32px 64px; }
 .section-title { color: var(--gold); font-size: 30px; font-style: italic; text-align: center; }
-.section-rule { width: 36px; height: 1px; margin: 16px auto 40px; background: var(--line); }
+/* .section-rule { width: 36px; height: 1px; margin: 16px auto 40px; background: var(--line); } */
 .story-list { display: flex; flex-direction: column; gap: 44px; }
 .story-item { display: grid; grid-template-columns: 120px 1fr; gap: 18px; align-items: center; }
 .story-item.reverse { grid-template-columns: 1fr 120px; }
