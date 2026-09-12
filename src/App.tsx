@@ -136,14 +136,14 @@ function MusicPlayer() {
       <DecorativeLineArt side="left" />
       <DecorativeLineArt side="right" />
 <div className="monogram">
-    <img src="/public/assets/images/monogram-ad.png" alt="A & D" />
+    <img src="/assets/images/monogram-ad.png" alt="A & D" />
 </div>     
  <div className="music-photo">
         <img src={musicPhoto} alt="Abd elrahman and Donia" />
       </div>
 <div className="music-track">
     <img
-        src="/public/assets/images/AbdelRahman_Donia_08.10.2026_transparent_fixed2.png"
+        src="/assets/images/AbdelRahman_Donia_08.10.2026_transparent_fixed2.png"
         alt="Abd elrahman & Donia | 8.10.26"
     />
 </div>      <div className="seek-wrap">
@@ -245,7 +245,7 @@ function Announcement() {
       </div>
 <div className="signature display">
     <img
-        src="/public/assets/images/monogram-ad2.png"
+        src="/assets/images/monogram-ad2.png"
         alt="A | D"
     />
 </div>      <div className="couple-photo">
@@ -294,7 +294,7 @@ function OurStory() {
       transition={{ duration: 0.7, ease: 'easeOut' }}
     >
 <div className="display section-title">
-    <img src="/public/assets/images/our-story.png" alt="Our Story" />
+    <img src="/assets/images/our-story.png" alt="Our Story" />
 </div>    
   <div className="section-rule" />
       <div className="story-list">
