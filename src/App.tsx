@@ -79,7 +79,7 @@ function EnvelopeHero() {
     // </section>
     <section className="hero" aria-label="Engagement invitation">
   <img
-    src="/assets/images/image.png"
+    src="/assets/images/image.jpeg"
     alt="Abdelrahman and Donia engagement invitation"
     className="hero-image"
   />
@@ -455,7 +455,8 @@ transition={{ duration: 0.7, ease: "easeOut" }}
 
     <div className="address">
   
-Panorama October Club, Stadium Corridor St.
+Panorama October Club, Stadium
+Corridor St.
 Salah Salem Rd., Cairo.
     </div>
 
