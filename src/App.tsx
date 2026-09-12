@@ -454,9 +454,9 @@ transition={{ duration: 0.7, ease: "easeOut" }}
     <div className="doors">Doors open 7:00 PM</div>
 
     <div className="address">
-      Eloura Hall Panorama October
+     Club Stadium Corridor St., Salah Salem Rd. 
       <br />
-      Cairo, Egypt
+      Cairo
     </div>
 
     <a
